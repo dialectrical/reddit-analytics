@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { SubredditInput } from "./Components/SubredditInput";
+import { Heatmap } from "./Components/Heatmap";
+import { DisplayPosts } from "./Components/DisplayPosts";
+import { SubmitButton } from "./Components/SubmitButton";
 
-function App() {
+export const App = () => {
+  const [redditData, setRedditData] = useState();
+  const [subredditSearch, setSubredditSearch] = useState("fountainpens");
+  const baseURL =
+    "https://api.pushshift.io/reddit/search/submission/?subreddit=";
+
+  const update = () => {
+    axios
+      .get(baseURL + subredditSearch + "&after=1630729196")
+      .then(response => {
+        setRedditData(response.data);
+      });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {SubredditInput(setSubredditSearch)}
+      {SubmitButton(update)}
+      {Heatmap()}
+      {redditData ? DisplayPosts(redditData) : <p>no</p>}
     </div>
   );
-}
+};
 
 export default App;
