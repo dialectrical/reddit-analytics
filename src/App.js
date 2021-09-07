@@ -4,6 +4,8 @@ import { SubredditInput } from "./Components/SubredditInput";
 import { Heatmap } from "./Components/Heatmap";
 import { DisplayPosts } from "./Components/DisplayPosts";
 import { SubmitButton } from "./Components/SubmitButton";
+import { useGetWeekStart } from "./Components/Hooks/useGetWeekStart";
+import { useGetHourlyData } from "./Components/Hooks/useGetHourlyData";
 
 export const App = () => {
   const [redditData, setRedditData] = useState();
