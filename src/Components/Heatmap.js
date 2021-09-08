@@ -1,7 +1,11 @@
 import React from "react";
 import { StyledTable } from "./Styles/StyledTable";
+import { useGetWeeklyTimetable } from "./Hooks/useGetWeeklyTimetable";
+import { useGetHourlyData } from "./Hooks/useGetHourlyData";
 
-export const Heatmap = () => {
+export const Heatmap = url => {
+  const weeklyTimetable = useGetWeeklyTimetable();
+
   return (
     <StyledTable bordered>
       <thead>
@@ -36,30 +40,12 @@ export const Heatmap = () => {
       <tbody>
         <tr>
           <th scope="row">Sunday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][0], url)}</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][1], url)}</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][2], url)}</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][3], url)}</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][4], url)}</td>
+          <td>{useGetHourlyData(weeklyTimetable[0][5], url)}</td>
         </tr>
         <tr>
           <th scope="row">Monday</th>
