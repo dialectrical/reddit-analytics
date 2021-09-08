@@ -1,32 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { SubredditInput } from "./Components/SubredditInput";
 import { Heatmap } from "./Components/Heatmap";
 import { DisplayPosts } from "./Components/DisplayPosts";
 import { SubmitButton } from "./Components/SubmitButton";
-import { useGetWeekStart } from "./Components/Hooks/useGetWeekStart";
-import { useGetHourlyData } from "./Components/Hooks/useGetHourlyData";
+import { useGetWeeklyTimetable } from "./Components/Hooks/useGetWeeklyTimetable";
 
 export const App = () => {
   const [redditData, setRedditData] = useState();
   const [subredditSearch, setSubredditSearch] = useState("fountainpens");
-  const baseURL =
-    "https://api.pushshift.io/reddit/search/submission/?subreddit=";
+  const [baseURL, setBaseURL] = useState(
+    "https://api.pushshift.io/reddit/search/submission/?subreddit=fountainpens"
+  );
 
   const update = () => {
-    axios
-      .get(baseURL + subredditSearch + "&after=1630729196")
-      .then(response => {
-        setRedditData(response.data);
-      });
+    setBaseURL(
+      "https://api.pushshift.io/reddit/search/submission/?subreddit=" +
+        subredditSearch
+    );
   };
 
   return (
     <div>
       {SubredditInput(setSubredditSearch)}
       {SubmitButton(update)}
-      {Heatmap()}
-      {redditData ? DisplayPosts(redditData) : <p>no</p>}
+      {Heatmap(baseURL)}
+      {redditData ? DisplayPosts(redditData) : <></>}
     </div>
   );
 };
