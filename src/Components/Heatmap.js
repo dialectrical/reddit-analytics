@@ -41,11 +41,6 @@ export const Heatmap = url => {
         <tr>
           <th scope="row">Sunday</th>
           <td>{useGetHourlyData(weeklyTimetable[0][0], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][1], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][2], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][3], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][4], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][5], url)}</td>
         </tr>
         <tr>
           <th scope="row">Monday</th>
