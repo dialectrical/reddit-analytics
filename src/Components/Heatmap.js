@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyledTable } from "./Styles/StyledTable";
 import { useGetWeeklyTimetable } from "./Hooks/useGetWeeklyTimetable";
-import { useGetHourlyData } from "./Hooks/useGetHourlyData";
+import { getDailyData } from "./Hooks/useGetDailyData";
 
 export const Heatmap = url => {
   const weeklyTimetable = useGetWeeklyTimetable();
+  useEffect(() => {
+    const sundayData = getDailyData(weeklyTimetable[0], url);
+  }, [url]); //TODO: use async/await to get data for the entire week
 
+  //TODO: use conditional rendering to have a loading wheel
+
+  //TODO: use maps to populate the heatmap
   return (
     <StyledTable bordered>
       <thead>
@@ -40,12 +46,7 @@ export const Heatmap = url => {
       <tbody>
         <tr>
           <th scope="row">Sunday</th>
-          <td>{useGetHourlyData(weeklyTimetable[0][0], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][1], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][2], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][3], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][4], url)}</td>
-          <td>{useGetHourlyData(weeklyTimetable[0][5], url)}</td>
+          <td></td>
         </tr>
         <tr>
           <th scope="row">Monday</th>
