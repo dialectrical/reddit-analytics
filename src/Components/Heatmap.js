@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { StyledTable } from "./Styles/StyledTable";
 import { useGetWeeklyTimetable } from "./Hooks/useGetWeeklyTimetable";
-import { getDailyData } from "./Hooks/useGetDailyData";
+import { getDailyData } from "./Hooks/getDailyData";
 
 export const Heatmap = url => {
   const weeklyTimetable = useGetWeeklyTimetable();
   useEffect(() => {
-    const sundayData = getDailyData(weeklyTimetable[0], url);
+    const sundayData = getDailyData(weeklyTimetable[3], url);
   }, [url]); //TODO: use async/await to get data for the entire week
 
   //TODO: use conditional rendering to have a loading wheel
