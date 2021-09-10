@@ -3,14 +3,13 @@ import { SubredditInput } from "./Components/SubredditInput";
 import { Heatmap } from "./Components/Heatmap";
 import { useGetWeeklyTimetable } from "./Components/Hooks/useGetWeeklyTimetable";
 import { getDailyData } from "./Components/Hooks/getDailyData";
-import { DisplayPosts } from "./Components/DisplayPosts";
 import { SubmitButton } from "./Components/SubmitButton";
 import { hourlyList } from "./Components/hourlyList";
 
 export const App = () => {
   const [redditData, setRedditData] = useState();
   const [weeklyData, setWeeklyData] = useState();
-  const [activeHourlyData, setActiveHourlyData] = useState();
+  const [activeHourlyData, setActiveHourlyData] = useState([]);
   const [subredditSearch, setSubredditSearch] = useState("fountainpens");
   const [baseURL, setBaseURL] = useState(
     "https://api.pushshift.io/reddit/search/submission/?subreddit=fountainpens&size=500"
@@ -27,19 +26,15 @@ export const App = () => {
         subredditSearch +
         "&size=500"
     );
-    setWeeklyData(null);
-    setActiveHourlyData(null);
-  };
-
-  const showHourlyData = event => {
-    setActiveHourlyData(event);
+    setWeeklyData();
+    setActiveHourlyData();
   };
 
   return (
     <div>
       {SubredditInput(setSubredditSearch)}
       {SubmitButton(update)}
-      {Heatmap(weeklyData, showHourlyData)}
+      {Heatmap(weeklyData, setActiveHourlyData)}
       {activeHourlyData ? hourlyList(activeHourlyData) : <></>}
     </div>
   );

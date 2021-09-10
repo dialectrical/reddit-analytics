@@ -5,7 +5,7 @@ import {
   StyledInput
 } from "./Styles/StyledInput";
 
-export const SubredditInput = (func, getData) => {
+export const SubredditInput = func => {
   const handleChange = event => {
     return func(event.currentTarget.value);
   };

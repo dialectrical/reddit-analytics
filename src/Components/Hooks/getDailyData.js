@@ -23,7 +23,6 @@ export const getDailyData = (time, url, updateState) => {
         console.log(data);
       }
     }
-    console.log("done!");
     return updateState(data);
   };
 

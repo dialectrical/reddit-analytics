@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyledTable } from "./Styles/StyledTable";
 
-export const Heatmap = (weeklyData, showHourlyData) => {
+export const Heatmap = (weeklyData, setActiveHourlyData) => {
   if (!weeklyData) {
     return <div>"Loading..."</div>;
   }
@@ -41,43 +41,99 @@ export const Heatmap = (weeklyData, showHourlyData) => {
         <tr>
           <th scope="row">Sunday</th>
           {weeklyData[0].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Monday</th>
           {weeklyData[1].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Tuesday</th>
           {weeklyData[2].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Wednesday</th>
           {weeklyData[3].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Thursday</th>
           {weeklyData[4].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Friday</th>
           {weeklyData[5].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
         <tr>
           <th scope="row">Saturday</th>
           {weeklyData[6].map(x => {
-            return <td>{x.length}</td>;
+            return (
+              <td
+                onClick={() => {
+                  setActiveHourlyData(x);
+                }}
+              >
+                {x.length}
+              </td>
+            );
           })}
         </tr>
       </tbody>
