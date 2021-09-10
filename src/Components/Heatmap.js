@@ -1,32 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledTable } from "./Styles/StyledTable";
-import { useGetWeeklyTimetable } from "./Hooks/useGetWeeklyTimetable";
-import { getDailyData } from "./Hooks/getDailyData";
 
-export const Heatmap = url => {
-  const weeklyTimetable = useGetWeeklyTimetable();
-  useEffect(() => {
-    const sundayData = getDailyData(weeklyTimetable[3], url);
-  }, [url]); //TODO: use async/await to get data for the entire week
+export const Heatmap = (url, weeklyData, setState) => {
+  if (!weeklyData) {
+    return <div>"Loading..."</div>;
+  }
 
-  //TODO: use conditional rendering to have a loading wheel
-
-  //TODO: use maps to populate the heatmap
   return (
     <StyledTable bordered>
       <thead>
         <tr>
           <th></th>
-          <th>0:00 - 0:59</th>
-          <th>1:00 - 1:59</th>
-          <th>2:00 - 2:59</th>
-          <th>3:00 - 3:59</th>
-          <th>4:00 - 4:59</th>
-          <th>5:00 - 5:59</th>
-          <th>6:00 - 6:59</th>
-          <th>7:00 - 7:59</th>
-          <th>8:00 - 8:59</th>
-          <th>9:00 - 9:59</th>
+          <th>0 - 1</th>
+          <th>1 - 2</th>
+          <th>2 - 3</th>
+          <th>3 - 4</th>
+          <th>4 - 5</th>
+          <th>5 - 6</th>
+          <th>6 - 7</th>
+          <th>7 - 8</th>
+          <th>8 - 9</th>
+          <th>9 - 10</th>
           <th>10:00 - 10:59</th>
           <th>11:00 - 11:59</th>
           <th>12:00 - 12:59</th>
@@ -46,169 +40,45 @@ export const Heatmap = url => {
       <tbody>
         <tr>
           <th scope="row">Sunday</th>
-          <td></td>
+          {weeklyData[0].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Monday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[1].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Tuesday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[2].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Wednesday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[3].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Thursday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[4].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Friday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[5].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
         <tr>
           <th scope="row">Saturday</th>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
-          <td>X</td>
+          {weeklyData[6].map(x => {
+            return <td>{x.length}</td>;
+          })}
         </tr>
       </tbody>
     </StyledTable>
