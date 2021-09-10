@@ -17,9 +17,11 @@ export const getDailyData = (time, url) => {
 
   const dailyData = async () => {
     for (let item of time) {
-      await fetchData(item);
-      console.log(item);
-      console.log(test);
+      for (let h = 0; h < 24; h++) {
+        await fetchData(item[h]);
+        console.log(item[h]);
+        console.log(test);
+      }
     }
     return;
   };
