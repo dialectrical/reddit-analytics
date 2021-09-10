@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyledTable } from "./Styles/StyledTable";
 
-export const Heatmap = (url, weeklyData, setState) => {
+export const Heatmap = (weeklyData, showHourlyData) => {
   if (!weeklyData) {
     return <div>"Loading..."</div>;
   }

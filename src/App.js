@@ -5,6 +5,7 @@ import { useGetWeeklyTimetable } from "./Components/Hooks/useGetWeeklyTimetable"
 import { getDailyData } from "./Components/Hooks/getDailyData";
 import { DisplayPosts } from "./Components/DisplayPosts";
 import { SubmitButton } from "./Components/SubmitButton";
+import { hourlyList } from "./Components/hourlyList";
 
 export const App = () => {
   const [redditData, setRedditData] = useState();
@@ -30,17 +31,16 @@ export const App = () => {
     setActiveHourlyData(null);
   };
 
-  /* const showHourlyData = event => {
-    let list = makeHourlyList(event.currentTarget.value);
-    setActiveHourlyData(list);
-  }; */
+  const showHourlyData = event => {
+    setActiveHourlyData(event);
+  };
 
   return (
     <div>
       {SubredditInput(setSubredditSearch)}
       {SubmitButton(update)}
-      {Heatmap(baseURL, weeklyData, setWeeklyData)}
-      {redditData ? DisplayPosts(redditData) : <></>}
+      {Heatmap(weeklyData, showHourlyData)}
+      {activeHourlyData ? hourlyList(activeHourlyData) : <></>}
     </div>
   );
 };
