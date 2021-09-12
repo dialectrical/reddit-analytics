@@ -9,7 +9,7 @@ import { hourlyList } from "./Components/hourlyList";
 export const App = () => {
   const [redditData, setRedditData] = useState();
   const [weeklyData, setWeeklyData] = useState();
-  const [activeHourlyData, setActiveHourlyData] = useState([]);
+  const [activeHourlyData, setActiveHourlyData] = useState([[], [], []]);
   const [subredditSearch, setSubredditSearch] = useState("fountainpens");
   const [baseURL, setBaseURL] = useState(
     "https://api.pushshift.io/reddit/search/submission/?subreddit=fountainpens&size=500"
@@ -31,7 +31,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       {SubredditInput(setSubredditSearch)}
       {SubmitButton(update)}
       {Heatmap(weeklyData, setActiveHourlyData)}

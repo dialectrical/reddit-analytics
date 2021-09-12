@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { InputGroup, InputGroupText, Input } from "reactstrap";
 
 export const StyledInputGroup = styled(InputGroup)`
+  margin-left: 40vw;
   font-family: Verdana;
-  width: 21vw;
+  width: 20vw;
   padding: 1vw;
 `;
 
