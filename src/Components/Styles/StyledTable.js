@@ -10,10 +10,10 @@ export const StyledTable = styled(Table)`
   font-family: Verdana;
   width: 90vw;
   height: 24vw;
-  font-size: 0.75vw;
   text-align: center;
 
   @media (max-width: 1024px) {
+    height: 95vh;
     width: 100vw;
   }
 `;
@@ -41,5 +41,13 @@ export const Styledtd = styled.td`
   text-align: center;
   :hover {
     background-color: #eff7ff;
+  }
+`;
+
+export const Styledth = styled.th`
+  height: 3vw;
+
+  @media (max-width: 1024px) {
+    height: 11vh;
   }
 `;
