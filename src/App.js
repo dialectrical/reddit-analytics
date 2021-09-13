@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import GithubCorner from "react-github-corner";
 import "./App.css";
 import reddit_logo from "./img/reddit_logo.png";
 import { SubredditInput } from "./Components/SubredditInput";
@@ -9,7 +10,6 @@ import { SubmitButton } from "./Components/SubmitButton";
 import { hourlyList } from "./Components/hourlyList";
 
 export const App = () => {
-  const [redditData, setRedditData] = useState();
   const [weeklyData, setWeeklyData] = useState();
   const [activeHourlyData, setActiveHourlyData] = useState([[], [], []]);
   const [subredditSearch, setSubredditSearch] = useState("fountainpens");
@@ -34,6 +34,10 @@ export const App = () => {
 
   return (
     <div className="main">
+      <GithubCorner
+        href="https://github.com/dialectrical/reddit-analytics"
+        bannerColor="#FF4500"
+      />
       <header>
         <img src={reddit_logo} alt="" className="logo" />
         <h2>Last Week's Subreddit Activity</h2>
