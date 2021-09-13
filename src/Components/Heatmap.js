@@ -1,72 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Spinner } from "reactstrap";
 import { StyledTable, Styledtd } from "./Styles/StyledTable";
 
 export const Heatmap = (weeklyData, setActiveHourlyData) => {
   if (!weeklyData) {
     return (
       <StyledTable bordered>
-        <thead>
-          <tr>
-            <th></th>
-            <th>0 - 1</th>
-            <th>1 - 2</th>
-            <th>2 - 3</th>
-            <th>3 - 4</th>
-            <th>4 - 5</th>
-            <th>5 - 6</th>
-            <th>6 - 7</th>
-            <th>7 - 8</th>
-            <th>8 - 9</th>
-            <th>9 - 10</th>
-            <th>10 - 11</th>
-            <th>11 - 12</th>
-            <th>12 - 13</th>
-            <th>13 - 14</th>
-            <th>14 - 15</th>
-            <th>15 - 16</th>
-            <th>16 - 17</th>
-            <th>17 - 18</th>
-            <th>18 - 19</th>
-            <th>19 - 20</th>
-            <th>20 - 21</th>
-            <th>21 - 22</th>
-            <th>22 - 23</th>
-            <th>23 - 0</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Sunday
-            </th>
-            <td>"Loading..."</td>
-          </tr>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Tuesday
-            </th>
-          </tr>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Wednesday
-            </th>
-          </tr>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Thursday
-            </th>
-          </tr>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Friday
-            </th>
-          </tr>
-          <tr>
-            <th scope="row" style={{ height: "3vw" }}>
-              Saturday
-            </th>
-          </tr>
-        </tbody>
+        <Spinner
+          size="sm"
+          children=""
+          style={{ marginTop: "5vw", width: "7vw", height: "7vw" }}
+        />
+        {""}
+        <p>Loading... This can take a few minutes.</p>
+      </StyledTable>
+    );
+  } else if (weeklyData === "Error") {
+    return (
+      <StyledTable bordered>
+        <h2 className="display-3" style={{ marginTop: "5vw", fontSize: "7vw" }}>
+          👾
+        </h2>
+        <p>
+          Uh-oh! There's been an error getting data from the API. Please wait a
+          moment and try again. <br />
+          Don't worry, last week isn't going anywhere.
+        </p>
       </StyledTable>
     );
   }

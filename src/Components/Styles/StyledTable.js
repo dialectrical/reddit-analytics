@@ -9,6 +9,7 @@ export const StyledTable = styled(Table)`
   margin: auto;
   font-family: Verdana;
   width: 90vw;
+  height: 24vw;
   font-size: 0.75vw;
   text-align: center;
 `;
@@ -29,4 +30,7 @@ export const Styledtd = styled.td`
   cursor: pointer;
   margin: auto;
   text-align: center;
+  :hover {
+    background-color: #eff7ff;
+  }
 `;
