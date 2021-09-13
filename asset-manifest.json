@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reddit-analytics/static/css/main.51106e6e.chunk.css",
-    "main.js": "/reddit-analytics/static/js/main.12d25083.chunk.js",
-    "main.js.map": "/reddit-analytics/static/js/main.12d25083.chunk.js.map",
+    "main.js": "/reddit-analytics/static/js/main.ebfbfe92.chunk.js",
+    "main.js.map": "/reddit-analytics/static/js/main.ebfbfe92.chunk.js.map",
     "runtime-main.js": "/reddit-analytics/static/js/runtime-main.b86c23ca.js",
     "runtime-main.js.map": "/reddit-analytics/static/js/runtime-main.b86c23ca.js.map",
     "static/css/2.c490997a.chunk.css": "/reddit-analytics/static/css/2.c490997a.chunk.css",
@@ -14,13 +14,13 @@
     "static/css/2.c490997a.chunk.css.map": "/reddit-analytics/static/css/2.c490997a.chunk.css.map",
     "static/css/main.51106e6e.chunk.css.map": "/reddit-analytics/static/css/main.51106e6e.chunk.css.map",
     "static/js/2.64a26823.chunk.js.LICENSE.txt": "/reddit-analytics/static/js/2.64a26823.chunk.js.LICENSE.txt",
-    "static/media/reddit_logo.b2b2ab46.png": "/reddit-analytics/static/media/reddit_logo.b2b2ab46.png"
+    "static/media/logo.63ed6541.svg": "/reddit-analytics/static/media/logo.63ed6541.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b86c23ca.js",
     "static/css/2.c490997a.chunk.css",
     "static/js/2.64a26823.chunk.js",
     "static/css/main.51106e6e.chunk.css",
-    "static/js/main.12d25083.chunk.js"
+    "static/js/main.ebfbfe92.chunk.js"
   ]
 }
