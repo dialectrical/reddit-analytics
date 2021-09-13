@@ -6,6 +6,9 @@ export const StyledInputGroup = styled(InputGroup)`
   width: 20vw;
   margin: auto;
   margin-bottom: 10px;
+  @media (max-width: 1024px) {
+    width: 50vw;
+  }
 `;
 
 export const StyledInputGroupText = styled(InputGroupText)`

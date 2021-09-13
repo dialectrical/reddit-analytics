@@ -4,8 +4,8 @@ import rateLimit from "axios-rate-limit";
 export const getDailyData = (time, url, updateState) => {
   updateState();
   const http = rateLimit(axios.create(), {
-    maxRequests: 2,
-    perMilliseconds: 2000
+    maxRequests: 1,
+    perMilliseconds: 1000
   });
   let data = [[], [], [], [], [], [], []];
 
