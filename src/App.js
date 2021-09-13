@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GithubCorner from "react-github-corner";
 import "./App.css";
-import reddit_logo from "./img/reddit_logo.png";
+import logo from "./img/logo.svg";
 import { SubredditInput } from "./Components/SubredditInput";
 import { Heatmap } from "./Components/Heatmap";
 import { useGetWeeklyTimetable } from "./Components/Hooks/useGetWeeklyTimetable";
@@ -39,7 +39,7 @@ export const App = () => {
         bannerColor="#FF4500"
       />
       <header>
-        <img src={reddit_logo} alt="" className="logo" />
+        <img src={logo} alt="" className="logo" />
         <h2>Last Week's Subreddit Activity</h2>
         <p>See last week's activity, today.</p>
       </header>
