@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reddit-analytics/static/css/main.51106e6e.chunk.css",
+    "main.css": "/reddit-analytics/static/css/main.e60be421.chunk.css",
     "main.js": "/reddit-analytics/static/js/main.ebfbfe92.chunk.js",
     "main.js.map": "/reddit-analytics/static/js/main.ebfbfe92.chunk.js.map",
     "runtime-main.js": "/reddit-analytics/static/js/runtime-main.b86c23ca.js",
@@ -12,7 +12,7 @@
     "static/js/3.b165d956.chunk.js.map": "/reddit-analytics/static/js/3.b165d956.chunk.js.map",
     "index.html": "/reddit-analytics/index.html",
     "static/css/2.c490997a.chunk.css.map": "/reddit-analytics/static/css/2.c490997a.chunk.css.map",
-    "static/css/main.51106e6e.chunk.css.map": "/reddit-analytics/static/css/main.51106e6e.chunk.css.map",
+    "static/css/main.e60be421.chunk.css.map": "/reddit-analytics/static/css/main.e60be421.chunk.css.map",
     "static/js/2.64a26823.chunk.js.LICENSE.txt": "/reddit-analytics/static/js/2.64a26823.chunk.js.LICENSE.txt",
     "static/media/logo.63ed6541.svg": "/reddit-analytics/static/media/logo.63ed6541.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.b86c23ca.js",
     "static/css/2.c490997a.chunk.css",
     "static/js/2.64a26823.chunk.js",
-    "static/css/main.51106e6e.chunk.css",
+    "static/css/main.e60be421.chunk.css",
     "static/js/main.ebfbfe92.chunk.js"
   ]
 }
