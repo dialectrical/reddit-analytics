@@ -3,11 +3,12 @@ import rateLimit from "axios-rate-limit";
 
 export const getDailyData = (time, url, updateState) => {
   const http = rateLimit(axios.create(), {
-    maxRequests: 168,
-    preMilliseconds: 1000,
-    maxRPS: 1
+    maxRequests: 2,
+    perMilliseconds: 2000
   });
   let data = [[], [], [], [], [], [], []];
+
+  http.getMaxRPS();
 
   const fetchData = async d => {
     for (let h = 0; h < 24; h++) {
