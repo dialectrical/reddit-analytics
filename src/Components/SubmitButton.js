@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { StyledButton } from "./Styles/StyledButton";
 
 export const SubmitButton = func => {
   return (
-    <Button color="primary" onClick={func}>
+    <StyledButton color="primary" onClick={func}>
       Search
-    </Button>
+    </StyledButton>
   );
 };
