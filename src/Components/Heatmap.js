@@ -15,7 +15,7 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
         <p>Loading... This can take a few minutes.</p>
       </StyledTable>
     );
-  } else if (weeklyData === "Error" || weeklyData.length !== 168) {
+  } else if (weeklyData === "Error") {
     return (
       <StyledTable bordered>
         <h2 className="display-3" style={{ marginTop: "5vw", fontSize: "7vw" }}>
