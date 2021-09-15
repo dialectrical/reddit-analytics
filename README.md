@@ -22,8 +22,8 @@ Clicking a link takes users to the corresponding Reddit post!
 
 On mobile, the heatmap is resized and given an overflow scroll bar to keep things tidy:
 
-![alt](./assets/screenshotMobile1.png)
+![alt](./assets/screenshotMobile1.PNG)
 
 And users can still access hourly post lists:
 
-![alt](./assets/screenshotMobile2.png)
+![alt](./assets/screenshotMobile2.PNG)
