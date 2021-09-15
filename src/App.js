@@ -40,11 +40,13 @@ export const App = () => {
       />
       <header>
         <img src={logo} alt="" className="logo" />
-        <h2>Last Week's Subreddit Activity</h2>
+        <h2 style={{ margin: "0px 5px 0px 5px" }}>
+          Last Week's Subreddit Activity
+        </h2>
         <p>See last week's activity, today.</p>
       </header>
       <body>
-        <p>
+        <p style={{ margin: "0px 5px 0px 5px" }}>
           Enter a subreddit name in the box below and click submit to get
           started. Heatmap squares can be clicked to view a list of posts made
           during that particular timeframe.
