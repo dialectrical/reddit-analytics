@@ -1,5 +1,5 @@
 .main {
-  font-family: Verdana;
+  font-family: Verdana, arial, helvetica, sans-serif;
   text-align: center;
   align: center;
   color: #222222;
@@ -8,6 +8,13 @@
 .logo {
   height: 160px;
   width: 160px;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
 }
 
 @keyframes App-logo-spin {

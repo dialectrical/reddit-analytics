@@ -3,7 +3,7 @@ import { Table } from "reactstrap";
 
 export const StyledTable = styled(Table)`
   background: #fafafa;
-  border: 1px solid #369;
+  border: 1px solid #efefed;
   border-radius: 7px;
   color: #222222;
   margin: auto;
@@ -13,14 +13,14 @@ export const StyledTable = styled(Table)`
   text-align: center;
 
   @media (max-width: 1024px) {
-    height: 95vh;
+    height: 88vh;
     width: 100vw;
   }
 `;
 
 export const StyledHourlyTable = styled(Table)`
   background: #fafafa;
-  border: 1px solid #369;
+  border: 1px solid #efefed;
   border-radius: 7px;
   color: #222222;
   width: 40vw;

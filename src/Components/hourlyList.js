@@ -16,7 +16,6 @@ export const hourlyList = data => {
   ));
 
   if (list.length) {
-    console.log(list);
     return (
       <StyledHourlyTable bordered>
         <thead
@@ -24,8 +23,8 @@ export const hourlyList = data => {
             textAlign: "center"
           }}
         >
-          {data[2].length} posts submitted to r/{data[2][0].subreddit} between{" "}
-          {startTime} and {endTime} on {data[0]}
+          {data[2].length} posts submitted to r/{data[2][0].subreddit} between
+          hours {startTime} and {endTime} on {data[0]}
         </thead>
         <tbody>{list}</tbody>
       </StyledHourlyTable>

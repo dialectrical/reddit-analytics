@@ -5,7 +5,9 @@ export const StyledInputGroup = styled(InputGroup)`
   font-family: Verdana;
   width: 20vw;
   margin: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
+  border: #efefed;
   @media (max-width: 1024px) {
     width: 50vw;
   }
