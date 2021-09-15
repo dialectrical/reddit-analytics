@@ -27,3 +27,17 @@ On mobile, the heatmap is resized and given an overflow scroll bar to keep thing
 And users can still access hourly post lists:
 
 ![alt](./assets/screenshotMobile2.PNG)
+
+## Contributing
+
+### Getting started
+
+Clone this repo, run `npm install` and `npm start` and you're good to go.
+
+### Submitting an issue
+
+Feel free to submit an issue for any bugs, feature requests, or fixes. Be as clear and concise as possible when describing the issue and what you'd like to see changed.
+
+### Submitting a pull request
+
+Link your PR to any related issues and describe what your PR changes.
