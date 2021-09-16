@@ -1,6 +1,8 @@
 # Reddit analytics
 
-Displays a heatmap of posts submitted to a given subreddit along with a list of posts made each hour. Uses [pushshift's api](https://github.com/pushshift/api) to gather data from Reddit and currently takes about 3 to 5 mintues to complete a request in order to reliably avoid exceeding the API's rate limit.
+Displays a heatmap of posts submitted to a given subreddit along with a list of posts made each hour. Uses [pushshift's api](https://github.com/pushshift/api) to gather data from Reddit and currently takes about 3 to 5 mintues to complete a request in order to reliably avoid exceeding the API's rate limit. 
+
+Built with React.
 
 Check out the [demo](https://dialectrical.github.io/reddit-analytics/).
 
