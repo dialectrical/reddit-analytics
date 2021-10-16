@@ -12,7 +12,8 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           style={{ marginTop: "5vw", width: "7vw", height: "7vw" }}
         />
         {""}
-        <p>Loading... This can take a few minutes.</p>
+        <p>Loading...</p>
+        <p>Due to API rate limits, this process takes about three minutes.</p>
       </StyledTable>
     );
   } else if (weeklyData === "Error") {
@@ -65,18 +66,18 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
         <tbody>
           <tr>
             <Styledth>Sunday</Styledth>
-            {weeklyData[0].map(x => {
+            {weeklyData[0].map((x) => {
               console.log(x);
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Sunday"],
                       [weeklyData[0].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -87,17 +88,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Monday</Styledth>
-            {weeklyData[1].map(x => {
+            {weeklyData[1].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Monday"],
                       [weeklyData[1].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -108,17 +109,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Tuesday</Styledth>
-            {weeklyData[2].map(x => {
+            {weeklyData[2].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Tuesday"],
                       [weeklyData[2].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -129,17 +130,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Wednesday</Styledth>
-            {weeklyData[3].map(x => {
+            {weeklyData[3].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Wednesday"],
                       [weeklyData[3].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -150,17 +151,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Thursday</Styledth>
-            {weeklyData[4].map(x => {
+            {weeklyData[4].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Thursday"],
                       [weeklyData[4].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -171,17 +172,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Friday</Styledth>
-            {weeklyData[5].map(x => {
+            {weeklyData[5].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Friday"],
                       [weeklyData[5].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
@@ -192,17 +193,17 @@ export const Heatmap = (weeklyData, setActiveHourlyData) => {
           </tr>
           <tr>
             <Styledth>Saturday</Styledth>
-            {weeklyData[6].map(x => {
+            {weeklyData[6].map((x) => {
               return (
                 <Styledtd
                   style={{
-                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100
+                    backgroundColor: "hsl(16, 100%, 50%," + x.length / 100,
                   }}
                   onClick={() => {
                     setActiveHourlyData([
                       ["Saturday"],
                       [weeklyData[6].indexOf(x)],
-                      x
+                      x,
                     ]);
                   }}
                 >
